@@ -3,17 +3,17 @@
 ## ~
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
 
-    <!-- dash-content-start -->
+<!-- dash-content-start -->
 Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
-    <!-- dash-content-end -->
+<!-- dash-content-end -->
 
 
 ## A
 Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
 
-    ```bash
+```bash
 npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
-    ```
+```
 
 
 ## B
