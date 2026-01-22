@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+    background: #000;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Placeholder for logo - remove when you add your image */
+.logo-placeholder {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+}
+
+.message {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    margin-bottom: 4rem;
+    letter-spacing: 0.05em;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Placeholder styling - replace with actual icons */
+.social-placeholder {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .message {
+        font-size: 1.2rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-links a {
+        width: 45px;
+        height: 45px;
+    }
+}
