@@ -1,8 +1,9 @@
 const canvas = document.getElementById('gradient');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d', { alpha: false });
 
 let width, height;
 let time = 0;
+let animationFrameId = null;
 
 function resize() {
     width = canvas.width = window.innerWidth;
@@ -74,7 +75,14 @@ function drawGradient() {
 function animate() {
     time += 0.01;
     drawGradient();
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
 }
 
 animate();
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', () => {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+    }
+});

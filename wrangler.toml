@@ -1,0 +1,35 @@
+name = "neonpotions"
+type = "javascript"
+account_id = ""
+workers_dev = false
+route = ""
+zone_id = ""
+
+[env.production]
+name = "neonpotions-prod"
+route = "neonpotions.com/*"
+zone_id = ""
+
+[build]
+command = ""
+cwd = ""
+watch_paths = []
+
+[build.upload]
+format = "service-worker"
+main = ""
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.wasm"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "Text"
+globs = ["**/*.txt", "**/*.html", "**/*.css", "**/*.js"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.eot", "**/*.otf", "**/*.ttf", "**/*.woff", "**/*.woff2"]
+fallthrough = true

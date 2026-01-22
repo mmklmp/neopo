@@ -1,0 +1,5 @@
+# Redirect www to non-www
+https://www.neonpotions.com/* https://neonpotions.com/:splat 301
+
+# Redirect HTTP to HTTPS (handled by Cloudflare automatically)
+# http://neonpotions.com/* https://neonpotions.com/:splat 301

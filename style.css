@@ -8,6 +8,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
     overflow: hidden;
     background: #000;
+    color: #fff;
+    line-height: 1.6;
 }
 
 canvas {
@@ -17,6 +19,8 @@ canvas {
     width: 100%;
     height: 100%;
     z-index: 1;
+    will-change: contents;
+    contain: layout style paint;
 }
 
 .content {
@@ -29,6 +33,7 @@ canvas {
     min-height: 100vh;
     padding: 2rem;
     text-align: center;
+    contain: layout style;
 }
 
 .logo {
@@ -70,6 +75,17 @@ canvas {
     letter-spacing: 0.05em;
 }
 
+.message h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.message p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+}
+
 .social-links {
     display: flex;
     gap: 2rem;
@@ -88,8 +104,9 @@ canvas {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    will-change: transform, box-shadow;
 }
 
 .social-links a:hover {
